@@ -3,292 +3,238 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Armand Masse</title>
+    <title>Armand Masse - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Pour icônes -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Garder ton CSS personnalisé pour tooltips et animations spécifiques -->
   </head>
-  <body class="font-roboto text-gray-800 bg-gray-50">
-    <header class="bg-[#0A2540] text-white sticky top-0 z-10">
-      <nav class="max-w-6xl mx-auto px-5 flex justify-between items-center py-4">
-        <ul class="nav-links flex gap-8">
-          <li><a href="#accueil" class="text-white hover:text-[#007BFF] transition-colors">Accueil</a></li>
-          <li><a href="#pourquoi-moi" class="text-white hover:text-[#007BFF] transition-colors">Pourquoi moi</a></li>
-          <li><a href="#competences" class="text-white hover:text-[#007BFF] transition-colors">Compétences</a></li>
-          <li><a href="#experiences" class="text-white hover:text-[#007BFF] transition-colors">Expériences</a></li>
-          <li><a href="#formations" class="text-white hover:text-[#007BFF] transition-colors">Formations</a></li>
-          <li><a href="#interets" class="text-white hover:text-[#007BFF] transition-colors">Intérêts</a></li>
-          <li><a href="#contact" class="text-white hover:text-[#007BFF] transition-colors">Contact</a></li>
-        </ul>
-        <div class="burger cursor-pointer md:hidden">
-          <div class="line w-8 h-0.5 bg-white mb-1.5"></div>
-          <div class="line w-8 h-0.5 bg-white mb-1.5"></div>
-          <div class="line w-8 h-0.5 bg-white"></div>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-indigo-900 text-white p-4 fixed w-full top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#hero" class="text-xl font-bold">Armand Masse</a>
+        <div class="md:hidden burger flex flex-col cursor-pointer">
+          <div class="line w-6 h-0.5 bg-white mb-1"></div>
+          <div class="line w-6 h-0.5 bg-white mb-1"></div>
+          <div class="line w-6 h-0.5 bg-white"></div>
         </div>
-      </nav>
-    </header>
-
-    <section id="accueil" class="hero w-full h-[50vh] bg-cover bg-center relative flex items-center justify-center text-center text-white" style="background-image: url('images/hero-bg.jpg'), linear-gradient(#0a2540, #0a2540)">
-      <div class="overlay absolute inset-0 bg-black/40"></div>
-      <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-52">
-        <div class="text-left max-w-xl">
-          <h1 class="text-6xl font-bold mb-0 py-8">Armand Masse</h1>
-          <p class="text-2xl text-gray-300">Alternant Data Analyst | DevOps & IA | Recherche alternance 2025</p>
-          <p class="bio-short text-lg mt-5">Issu d’un cursus DevOps à JUNIA XP et formé à l’IA, je me spécialise en Analyse Data. Passionné par l'automatisation et le traitement de données depuis mes premiers projets web, je cherche une alternance en Management de la Transformation Digitale en IA (ISCOD 2025–2027).</p>
-        </div>
-        <img src="images/profil.jpg" alt="Photo de Armand Masse" class="w-64 h-64 rounded-full object-cover border-4 border-white" />
-      </div>
-    </section>
-
-    <section id="pourquoi-moi" class="w-full py-16">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Pourquoi moi ?</h2>
-        <p class="mb-8">Plutôt que de lister mes qualités, je les démontre à travers mes expériences (passez la souris sur les cartes pour plus de détails).</p>
-        <div class="atouts-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 opacity-0 translate-y-5 transition-all duration-500">
-          <div class="atout bg-white p-5 rounded-lg shadow-md hover:-translate-y-2 transition-transform text-center" data-tooltip="Dans mes projets, j'ai utilisé l'IA pour traiter des données réelles, comme l'automatisation de contenu chez Inetum, réduisant le temps manuel de 50%.">
-            <i class="fas fa-brain text-4xl text-[#007BFF] mb-3 block"></i>
-            <h3 class="text-xl font-bold">Techniques & Logique</h3>
-          </div>
-          <div class="atout bg-white p-5 rounded-lg shadow-md hover:-translate-y-2 transition-transform text-center" data-tooltip="J'ai conçu et déployé un site vitrine complet en solo pour ARTANIME, de la maquette à la mise en ligne, sans supervision constante.">
-            <i class="fas fa-user-check text-4xl text-[#007BFF] mb-3 block"></i>
-            <h3 class="text-xl font-bold">Autonomie & Pratique</h3>
-          </div>
-          <div class="atout bg-white p-5 rounded-lg shadow-md hover:-translate-y-2 transition-transform text-center" data-tooltip="En stage chez TCD WEB, j'ai adapté mes designs basés sur les retours utilisateurs, montrant ma flexibilité et mon focus sur l'équipe.">
-            <i class="fas fa-users text-4xl text-[#007BFF] mb-3 block"></i>
-            <h3 class="text-xl font-bold">Soft Skills</h3>
-          </div>
-          <div class="atout bg-white p-5 rounded-lg shadow-md hover:-translate-y-2 transition-transform text-center" data-tooltip="J'ai créé des vidéos YouTube en anglais sur des thèmes tech, atteignant une audience internationale et démontrant ma fluidité en C1.">
-            <i class="fas fa-globe text-4xl text-[#007BFF] mb-3 block"></i>
-            <h3 class="text-xl font-bold">Langues & Ouverture</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="competences" class="w-full py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Mes Compétences</h2>
-        <p class="mb-8">Voici mes outils clés, démontrés par des exemples concrets (passez la souris sur les cartes pour plus de détails) :</p>
-        <div class="skills-grid grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Utilisé pour analyser des datasets chez Inetum, en automatisant le traitement avec Pandas et NumPy pour extraire insights rapides.">
-            <i class="fas fa-code text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">Python</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Employé pour queries complexes sur bases de données lors de projets DevOps, optimisant les requêtes pour performances.">
-            <i class="fas fa-database text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">SQL</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Création de dashboards interactifs pour visualiser données chez Inetum, aidant les équipes à prendre des décisions basées sur faits.">
-            <i class="fas fa-chart-bar text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">Power BI</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Développement front-end pour site de formations chez TCD WEB, avec interfaces responsives et user-friendly.">
-            <i class="fas fa-laptop-code text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">Angular</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Back-end pour site vitrine ARTANIME, gérant dynamiquement le contenu et les interactions.">
-            <i class="fas fa-server text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">PHP</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Automatisation de pipelines CI/CD dans mon Bachelor DevOps, assurant déploiements fiables et sécurisés.">
-            <i class="fas fa-tools text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">DevOps</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Intégration IA pour outils internes, comme génération de contenu automatisée pour gains d'efficacité.">
-            <i class="fas fa-robot text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">IA & Data</span>
-          </div>
-          <div class="skill-icon bg-white p-5 rounded-lg shadow-md hover:scale-105 transition-transform text-center" data-tooltip="Analyse avancée avec formules et VBA pour rapports personnalisés dans divers projets.">
-            <i class="fas fa-table text-4xl text-[#007BFF] mb-3 block"></i>
-            <span class="font-bold">Excel</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experiences" class="w-full py-16">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Mes Expériences</h2>
-        <div class="relative wrap overflow-hidden p-10 h-full">
-          <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-          <!-- Expérience 3 (most recent) -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Amélioration d’outils internes avec l’intelligence artificielle : automatisation de la création de contenu et du traitement de données pour gagner en efficacité. Travail en collaboration avec les équipes techniques et commerciales pour assurer la simplicité et l’utilité des outils.">
-              <h3 class="text-xl font-bold">Développeur IA chez INETUM</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">09/2023 – 09/2024, Lille</time>
-              <img src="images/projet-inetum.jpg" alt="Projet Inetum" class="w-full h-48 object-cover mt-2 rounded" onerror="this.style.display='none';" />
-            </div>
-          </div>
-
-          <!-- Expérience 2 -->
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Création d’un site pour organiser des formations : participation à la conception des pages, vérification du bon fonctionnement, et échanges avec les utilisateurs pour garantir une interface simple et efficace.">
-              <h3 class="text-xl font-bold">Développeur Angular - Stage chez TCD WEB</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">01/2023 – 02/2023, Villeneuve-d'Ascq</time>
-              <img src="images/projet-tcd.jpg" alt="Projet TCD WEB" class="w-full h-48 object-cover mt-2 rounded" onerror="this.style.display='none';" />
-            </div>
-          </div>
-
-          <!-- Expérience 1 (oldest) -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Création d’un site vitrine pour une association : projet mené en autonomie, de la maquette à la mise en ligne, incluant le design et la réalisation des pages.">
-              <h3 class="text-xl font-bold">Développeur PHP - Stage chez ARTANIME</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">05/2022 – 06/2022, Leers</time>
-              <img src="images/projet-artanime.jpg" alt="Projet ARTANIME" class="w-full h-48 object-cover mt-2 rounded" onerror="this.style.display='none';" />
-            </div>
-          </div>
-        </div>
-        <p class="mt-8">Autres réalisations personnelles : Applications web/mobile pour usages personnels, montages vidéo sur YouTube (en anglais, focus jeu vidéo), dessins réguliers, et rédaction de revues/histoires.</p>
-      </div>
-    </section>
-
-    <section id="formations" class="w-full py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Mes Formations</h2>
-        <div class="relative wrap overflow-hidden p-10 h-full">
-          <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-          <!-- Formation 3 (most recent) -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Comprendre et gérer le cycle complet d’une application : automatisation, mise en ligne, maintenance et sécurisation, en intégrant les aspects développement et exploitation pour garantir un fonctionnement fiable et sécurisé.">
-              <h3 class="text-xl font-bold">Bachelor DEVOPS - JUNIA XP Université Catholique de Lille</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">09/2023 – 09/2024, Lille</time>
-            </div>
-          </div>
-
-          <!-- Formation 2 -->
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Créer et faire fonctionner des solutions informatiques : conception, développement et évolution d’outils adaptés aux besoins des utilisateurs, avec un suivi pour assurer leur bon fonctionnement dans la durée.">
-              <h3 class="text-xl font-bold">BTS Service Informatique aux Organisations - Lycée Saint Rémi</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">09/2021 – 06/2023, Roubaix</time>
-            </div>
-          </div>
-
-          <!-- Formation 1 (oldest) -->
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-            </div>
-            <div class="order-1 bg-white rounded-lg shadow-md w-5/12 px-6 py-4" data-tooltip="Baccalauréat Général / Spé. Maths - SVT. Option Audio-Visuel : initiation à la création vidéo, montage et écriture de scénarios. Section Euro-Anglais : cours renforcés en anglais.">
-              <h3 class="text-xl font-bold">Baccalauréat Général - Lycée Collège Emile Zola</h3>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400">09/2018 – 06/2021, Wattrelos</time>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="interets" class="w-full py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Centres d'Intérêt</h2>
-        <p class="mb-8">En dehors du travail, je cultive ma créativité pour rester inspiré :</p>
-        <ul class="interets-list grid grid-cols-2 md:grid-cols-3 gap-8">
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-pencil-alt text-3xl text-[#007BFF]"></i>
-            <strong>Dessin</strong>
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-code text-3xl text-[#007BFF]"></i>
-            <strong>Développement</strong>
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-video text-3xl text-[#007BFF]"></i>
-            <strong>Montage Vidéo</strong>
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-book text-3xl text-[#007BFF]"></i>
-            <strong>Ecriture</strong>
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-hiking text-3xl text-[#007BFF]"></i>
-            <strong>Randonnée</strong>
-          </li>
-          <li class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3">
-            <i class="fas fa-campground text-3xl text-[#007BFF]"></i>
-            <strong>Camping en forêt</strong>
-          </li>
+        <ul class="nav-links hidden md:flex space-x-4">
+          <li><a href="#hero" class="hover:text-indigo-300">Accueil</a></li>
+          <li><a href="#atouts" class="hover:text-indigo-300">Pourquoi moi</a></li>
+          <li><a href="#competences" class="hover:text-indigo-300">Compétences</a></li>
+          <li><a href="#experiences" class="hover:text-indigo-300">Expériences</a></li>
+          <li><a href="#formations" class="hover:text-indigo-300">Formations</a></li>
+          <li><a href="#interets" class="hover:text-indigo-300">Intérêts</a></li>
+          <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
         </ul>
       </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-br from-indigo-900 to-indigo-600 text-white h-screen flex items-center justify-center text-center pt-16 md:pt-0 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiAvPgogICAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiAvPgogICAgPGNpcmNsZSBjeD0iNDgiIGN5PSI0OCIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiAvPgogICAgPGNpcmNsZSBjeD0iMjQiIGN5PSI0MCIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiAvPgogICAgPGNpcmNsZSBjeD0iNDAiIGN5PSIyNCIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiAvPgogIDwvZz4KPC9zdmc+')] bg-repeat opacity-20 animate-pulse"
+      ></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <img src="images/profil.jpg" alt="Armand Masse" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-lg transform hover:scale-105 transition-transform duration-300" />
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">Armand Masse</h1>
+        <p class="text-xl md:text-3xl mb-4 font-medium">Alternant Data Analyst | DevOps & IA | Recherche alternance 2025</p>
+        <p class="text-md md:text-xl max-w-2xl mx-auto leading-relaxed">Issu d’un cursus DevOps et formé à l’IA, je me spécialise en Analyse Data. Je recherche une alternance Data Analyst pour la rentrée 2025, dans le cadre de la formation Management de la Transformation Digitale en IA (ISCOD 2025–2027), en rythme 4 jours entreprise / 1 jour formation – flexible.</p>
+        <div class="mt-8">
+          <a href="#contact" class="bg-white text-indigo-900 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-indigo-100 transition-colors duration-300">Me contacter</a>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="w-full py-16">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="text-3xl font-bold text-[#0A2540] mb-4">Contactez-moi</h2>
-        <form action="mailto:armand.masse23@gmail.com" method="post" enctype="text/plain" class="flex flex-col gap-4 max-w-xl mx-auto mb-8">
-          <input type="text" name="name" placeholder="Votre nom" required class="p-4 border border-gray-300 rounded text-base" />
-          <input type="email" name="email" placeholder="Votre email" required class="p-4 border border-gray-300 rounded text-base" />
-          <textarea name="message" placeholder="Votre message" required class="p-4 border border-gray-300 rounded text-base h-32"></textarea>
-          <button type="submit" class="p-4 bg-[#0A2540] text-white rounded cursor-pointer hover:bg-[#007BFF] transition-colors">Envoyer</button>
+    <!-- Pourquoi moi Section -->
+    <section id="atouts" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Pourquoi moi ?</h2>
+        <p class="text-center mb-8">Au lieu de lister mes qualités, je les montre via mes expériences (survolez les cartes pour plus d'infos).</p>
+        <div class="atouts-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 opacity-0 translate-y-10 transition-all duration-500">
+          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Montré par des projets en Python et SQL qui résolvent des problèmes réels, comme l'analyse de grands volumes de données.">
+            <i class="fas fa-cogs text-indigo-900 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold">Techniques & Logique</h3>
+          </div>
+          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Développé lors de stages indépendants et de projets personnels, comme des apps web et mobile réalisées seul.">
+            <i class="fas fa-user-check text-indigo-900 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold">Autonomie & Pratique</h3>
+          </div>
+          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Affiné en équipe pendant des stages et des travaux scolaires, avec une communication claire et une bonne adaptabilité.">
+            <i class="fas fa-handshake text-indigo-900 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold">Soft Skills</h3>
+          </div>
+          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Anglais maîtrisé (niveau C1) et ouverture culturelle acquise par des voyages et des contenus en plusieurs langues.">
+            <i class="fas fa-globe text-indigo-900 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold">Langues & Ouverture</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Mes Compétences</h2>
+        <p class="text-center mb-8">Voici mes outils principaux, illustrés par des exemples concrets (survolez les cartes pour plus d'infos) :</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Employé pour l'IA et l'analyse de données chez INETUM, avec des scripts qui automatisent des tâches.">
+            <i class="fab fa-python text-indigo-900 text-3xl mb-2"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Requêtes avancées pour bases de données lors de stages et projets personnels.">
+            <i class="fas fa-database text-indigo-900 text-3xl mb-2"></i>
+            <p>SQL</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Tableaux de bord interactifs pour visualiser des données en alternance.">
+            <i class="fas fa-chart-bar text-indigo-900 text-3xl mb-2"></i>
+            <p>Power BI</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Développement frontend pour apps web chez TCD WEB.">
+            <i class="fab fa-angular text-indigo-900 text-3xl mb-2"></i>
+            <p>Angular</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Sites vitrine dynamiques pendant le stage chez ARTANIME.">
+            <i class="fab fa-php text-indigo-900 text-3xl mb-2"></i>
+            <p>PHP</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Automatisation CI/CD dans mon cursus DevOps.">
+            <i class="fas fa-tools text-indigo-900 text-3xl mb-2"></i>
+            <p>DevOps</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Modèles de machine learning et analyse de données en formation IA.">
+            <i class="fas fa-robot text-indigo-900 text-3xl mb-2"></i>
+            <p>IA & Data</p>
+          </div>
+          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Macros et formules avancées pour des rapports.">
+            <i class="fas fa-file-excel text-indigo-900 text-3xl mb-2"></i>
+            <p>Excel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expériences Section -->
+    <section id="experiences" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Mes Expériences</h2>
+        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-indigo-500">
+          <!-- Item 1 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
+            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Développement d'algorithmes IA pour optimiser des processus.">
+              <h3 class="text-xl font-semibold">Développeur IA chez INETUM</h3>
+              <p>09/2023 – 09/2024, Lille</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
+            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Création d'interfaces utilisateur réactives en Angular.">
+              <h3 class="text-xl font-semibold">Développeur Angular - Stage chez TCD WEB</h3>
+              <p>01/2023 – 02/2023, Villeneuve-d'Ascq</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
+            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Développement d'un site vitrine pour sites e-commerce.">
+              <h3 class="text-xl font-semibold">Développeur PHP - Stage chez ARTANIME</h3>
+              <p>05/2022 – 06/2022, Leers</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-8 text-center">Autres réalisations : Apps web et mobile pour usage personnel, montages vidéo sur YouTube (en anglais, sur les jeux vidéo), dessins réguliers, et rédaction de revues ou d'histoires.</p>
+      </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Mes Formations</h2>
+        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-indigo-500">
+          <!-- Item 1 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold">Bachelor DEVOPS - JUNIA XP Université Catholique de Lille</h3>
+              <p>09/2023 – 09/2024, Lille</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold">BTS Service Informatique aux Organisations - Lycée Saint Rémi</h3>
+              <p>09/2021 – 06/2023, Roubaix</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
+            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold">Baccalauréat Général - Lycée Collège Emile Zola</h3>
+              <p>09/2018 – 06/2021, Wattrelos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intérêts Section -->
+    <section id="interets" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Centres d'Intérêt</h2>
+        <p class="text-center mb-8">Hors travail, je développe ma créativité pour maintenir mon inspiration :</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-pencil-alt text-indigo-900 text-3xl mb-2"></i>
+            <p>Dessin</p>
+          </div>
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-code text-indigo-900 text-3xl mb-2"></i>
+            <p>Développement</p>
+          </div>
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-video text-indigo-900 text-3xl mb-2"></i>
+            <p>Montage Vidéo</p>
+          </div>
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-pen text-indigo-900 text-3xl mb-2"></i>
+            <p>Ecriture</p>
+          </div>
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-hiking text-indigo-900 text-3xl mb-2"></i>
+            <p>Randonnée</p>
+          </div>
+          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
+            <i class="fas fa-campground text-indigo-900 text-3xl mb-2"></i>
+            <p>Camping en forêt</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Contactez-moi</h2>
+        <form class="max-w-md mx-auto space-y-4">
+          <input type="text" placeholder="Votre Nom" class="w-full p-2 border rounded" />
+          <input type="email" placeholder="Votre Email" class="w-full p-2 border rounded" />
+          <textarea placeholder="Votre Message" class="w-full p-2 border rounded h-32"></textarea>
+          <button type="submit" class="bg-indigo-900 text-white px-4 py-2 rounded w-full">Envoyer</button>
         </form>
-        <p class="text-center">Ou directement : +33 7 82 35 24 35 | armand.masse23@gmail.com | Leers (59115)</p>
+        <p class="text-center mt-4">Ou directement : +33 7 82 35 24 35 | armand.masse23@gmail.com | Leers (59115)</p>
       </div>
     </section>
 
-    <footer class="w-full bg-[#0A2540] text-white text-center py-5">
-      <div class="max-w-6xl mx-auto px-5">
-        <p>&copy; 2025 Armand Masse. Tous droits réservés.</p>
-      </div>
+    <!-- Footer -->
+    <footer class="bg-indigo-900 text-white py-4 text-center">
+      <p>© 2025 Armand Masse. Tous droits réservés.</p>
     </footer>
 
-    <script>
-            document.addEventListener("DOMContentLoaded", () => {
-        const burger = document.querySelector(".burger");
-        const navLinks = document.querySelector(".nav-links");
-
-        burger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-          burger.classList.toggle("toggle");
-          document.querySelectorAll(".line").forEach((line) => line.classList.toggle("toggle"));
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-              behavior: "smooth",
-            });
-            navLinks.classList.remove("active");
-            burger.classList.remove("toggle");
-            document.querySelectorAll(".line").forEach((line) => line.classList.remove("toggle"));
-          });
-        });
-
-        // Fade-in on scroll for atouts
-        const atoutsGrid = document.querySelector(".atouts-grid");
-        const observerOptions = { threshold: 0.1 };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        }, observerOptions);
-
-        if (atoutsGrid) observer.observe(atoutsGrid);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
