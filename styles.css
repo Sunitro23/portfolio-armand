@@ -1,0 +1,72 @@
+/* Custom CSS minimal pour tooltips et animations */
+.atout,
+.skill-icon,
+.projet {
+  position: relative;
+  cursor: pointer;
+}
+
+.atout::after,
+.skill-icon::after,
+.projet::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: normal;
+  width: 400px; /* Augmenté pour moins étroit */
+  max-width: 400px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.atout:hover::after,
+.skill-icon:hover::after,
+.projet:hover::after {
+  opacity: 1;
+}
+
+.atouts-grid.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #0a2540;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
