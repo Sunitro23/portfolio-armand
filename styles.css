@@ -14,13 +14,13 @@
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  background: #333;
+  background: #312e81;
   color: white;
   padding: 6px 10px;
   border-radius: 4px;
   white-space: normal;
-  width: 400px; /* Augmenté pour moins étroit */
-  max-width: 400px;
+  width: auto;
+  max-width: 90vw;
   font-size: 0.9em;
   line-height: 1.4;
   opacity: 0;
@@ -48,7 +48,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    background: #0a2540;
+    background: #312e81;
     width: 100%;
     padding: 20px 0;
     text-align: center;
