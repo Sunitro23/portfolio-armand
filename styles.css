@@ -1,7 +1,8 @@
 /* Custom CSS minimal pour tooltips et animations */
 .atout,
 .skill-icon,
-.projet {
+.projet,
+.tech-icon {
   position: relative;
   cursor: pointer;
 }
@@ -18,20 +19,45 @@
   color: white;
   padding: 6px 10px;
   border-radius: 4px;
-  white-space: normal;
-  width: auto;
-  max-width: 90vw;
+  white-space: wrap;
+  width: 100%;
+  max-width: 500px;
+  max-height: auto;
   font-size: 0.9em;
   line-height: 1.4;
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
   z-index: 100;
+  text-align: center;
 }
-
+.tech-icon::after
+{
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #312e81;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: wrap;
+  width: auto;
+  max-width: 500px;
+  max-height: auto;
+  font-size: 0.9em;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 100;
+  text-align: center;
+}
 .atout:hover::after,
 .skill-icon:hover::after,
-.projet:hover::after {
+.projet:hover::after,
+.tech-icon:hover::after {
   opacity: 1;
 }
 
