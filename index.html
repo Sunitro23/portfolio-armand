@@ -1,427 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Armand Masse - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="bg-gray-50 text-gray-900 font-sans w-full">
-    <!-- Navbar -->
-    <nav class="bg-indigo-900 text-white p-4 fixed w-full top-0 z-50">
-      <div class="container mx-auto flex justify-between items-center w-full">
-        <a href="#hero" class="text-xl font-bold">Armand Masse</a>
-        <div class="md:hidden burger flex flex-col cursor-pointer">
-          <div class="line w-6 h-0.5 bg-white mb-1"></div>
-          <div class="line w-6 h-0.5 bg-white mb-1"></div>
-          <div class="line w-6 h-0.5 bg-white"></div>
-        </div>
-        <ul class="nav-links hidden md:flex space-x-4">
-          <li><a href="#hero" class="hover:text-indigo-300">Accueil</a></li>
-          <li><a href="#atouts" class="hover:text-indigo-300">Pourquoi moi</a></li>
-          <li><a href="#competences" class="hover:text-indigo-300">Compétences</a></li>
-          <li><a href="#projects" class="hover:text-indigo-300">Projets</a></li>
-          <li><a href="#experiences" class="hover:text-indigo-300">Expériences</a></li>
-          <li><a href="#formations" class="hover:text-indigo-300">Formations</a></li>
-          <li><a href="#interets" class="hover:text-indigo-300">Intérêts</a></li>
-          <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080b13"><meta name="description" content="Armand Massé, développeur junior Java / Angular, diplômé bac+3. Expériences, projets déployés et applications répondant à des besoins concrets."><title>Armand Massé — Développeur junior Java / Angular</title><link rel="stylesheet" href="style.css?v=20"><script src="i18n.js?v=4" defer></script><script src="app.js?v=16" defer></script><script src="cv.js?v=6" defer></script></head>
+<body>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;pointer-events:none"><defs><filter id="portrait-edge-trim" color-interpolation-filters="sRGB"><feMorphology in="SourceAlpha" operator="erode" radius="1.2" result="trimmed"/><feGaussianBlur in="trimmed" stdDeviation="0.25" result="softened"/><feComposite in="SourceGraphic" in2="softened" operator="in"/></filter></defs></svg>
+<a class="skip" href="#projets">Aller aux projets</a>
+<header><a class="logo" href="#accueil"><span>&lt;/&gt;</span> Armand Massé<span class="dot">.</span></a><nav aria-label="Navigation principale"><a href="#projets">Projets</a><a href="#apropos">Parcours</a><a href="#competences">Compétences</a></nav><label class="language-switch"><span class="sr-only">Langue / Language</span><select id="language" aria-label="Langue / Language"><option value="fr">Français</option><option value="en">English</option></select></label><a class="contact-link" href="#contact">Me contacter <span>↗</span></a></header>
+<main>
+<section class="hero wrap" id="accueil"><div class="hero-copy"><p class="eyebrow"><span class="status"></span> ARMAND MASSÉ · DÉVELOPPEUR</p><h1>Développeur junior.<br><em>Java / Angular.</em></h1><p class="intro">Diplômé bac+3, avec une année d’alternance chez Inetum et deux stages en développement. Je souhaite consolider mes compétences Java/Spring et Angular au sein d’une équipe expérimentée, en apportant mon sens du service et mon expérience d’applications répondant à des besoins concrets.</p><div class="actions"><a class="button primary" href="#projets">Voir mes projets <span>↗</span></a><button class="button" id="generate-cv" type="button">Télécharger mon CV <span aria-hidden="true">↓</span></button><a class="hero-github" href="https://github.com/Sunitro23" target="_blank" rel="noopener noreferrer">Mon GitHub <span aria-hidden="true">↗</span></a></div></div><div class="hero-art" aria-label="Portrait d’Armand Massé"><div class="orbit"></div><div class="portrait"><img class="profile-photo" src="assets/previews/portrait.png?v=2" alt="Portrait d’Armand Massé en chemise bleu clair" width="1086" height="1448" fetchpriority="high"></div><div class="code-window" aria-label="Quelques technologies utilisées dans mes projets"><div class="window-bar"><i></i><i></i><i></i><span>profil.js</span></div><code><span class="purple">const</span> profil = {<br>&nbsp; nom: <span class="green">"Armand Massé"</span>,<br>&nbsp; web: [<span class="green">"Angular"</span>, <span class="green">"React"</span>],<br>&nbsp; outils: [<span class="green">"Git"</span>, <span class="green">"Docker"</span>]<br>};</code></div></div></section>
+<section class="wrap projects portfolio-overview" id="projets" aria-labelledby="portfolio-heading"><div class="section-heading"><div><p class="eyebrow">01 / RÉALISATIONS</p><h2 id="portfolio-heading">Projets sélectionnés<span class="heading-dot">.</span></h2></div><span class="project-count" id="count" aria-live="polite">15 projets</span></div><p class="portfolio-intro">Applications métier, temps réel et automatisation. Explorez les interfaces, le code et les détails techniques.</p><p class="portfolio-intro">Conception de l’architecture et développement de fonctions ; utilisation de l’IA pour les fonctions génériques, les tests et la documentation. Déploiement, mises à jour et diagnostic des applications avec Docker, Nginx et Cloudflare.</p><div class="toolbar"><div class="filters" role="group" aria-label="Filtrer les projets"><button class="active" data-filter="Tous" aria-pressed="true">Tous</button><button data-filter="Web" aria-pressed="false">Web</button><button data-filter="Backend" aria-pressed="false">Backend</button><button data-filter="Mobile" aria-pressed="false">Mobile</button><button data-filter="Desktop" aria-pressed="false">Desktop</button></div><label class="sort">Trier par <select id="sort"><option value="selection">Sélection</option><option value="desc">Plus récents</option><option value="asc">Plus anciens</option></select></label></div><div id="project-list"></div><p class="date-note">Les dates correspondent au premier commit disponible, sauf Formation TST (réalisé en janvier 2023) et SSP Planning (date de mise en ligne).</p><noscript>Activez JavaScript pour afficher et filtrer les quinze projets. Les dépôts sont accessibles sur le profil GitHub Sunitro23 et celui de Basile-Mercado.</noscript></section>
+<section class="wrap about-summary" id="apropos" aria-labelledby="about-heading">
+ <div class="about-summary-inner">
+  <div class="about-summary-heading"><p class="eyebrow">02 / PARCOURS</p><h2 id="about-heading">Expériences<br>& formation<span class="heading-dot">.</span></h2></div>
+  <div class="about-summary-copy"><p>Développeur junior diplômé bac+3, j’ai acquis une année d’expérience en alternance chez Inetum et réalisé deux stages en développement chez TCD Web et Artanime.</p><p>Depuis la fin de mon alternance en septembre 2024, je poursuis ma pratique à travers des projets personnels et des outils utilisés à la MNS de Wattrelos.</p></div>
+ </div>
+</section>
+<section class="wrap career" aria-label="Expériences et formation">
+ <div class="career-experience"><h3>Expériences professionnelles</h3>
+  <details class="career-entry" open><summary><span class="career-date">Déc. 2025 — aujourd’hui</span><span class="career-position">Conseiller numérique <small>MNS de Wattrelos · Département du Nord · Service civique</small></span></summary><div class="career-body"><p>Développement de SSP Planning, utilisé par 3 secrétaires médico-sociales pour générer les permanences selon les congés, le télétravail et les indisponibilités.</p><p>Création de PMI Letters : génération en un clic d’au moins 15 courriers par semaine, auparavant préparés individuellement par la responsable PMI.</p><p>Support informatique aux collaborateurs et accompagnement d’environ 10 usagers par semaine dans leurs démarches numériques.</p><div class="career-projects"><button type="button" data-career-project="ssp-planning" aria-haspopup="dialog">SSP Planning ↗</button><button type="button" data-career-project="pmi-letters" aria-haspopup="dialog">PMI Letters ↗</button></div></div></details>
+  <details class="career-entry" open><summary><span class="career-date">Sept. 2023 — sept. 2024</span><span class="career-position">Développeur IA / Fullstack <small>Inetum · Lille · Alternance</small></span></summary><div class="career-body"><p>Conception et développement d’une application de recommandation de profils pour les projets, de l’analyse du besoin à la préparation du déploiement ; Python et PostgreSQL.</p><p>Création de pipelines GitLab CI/CD, utilisation de Docker, tests avec Pytest et travail avec merge requests ; points quotidiens et bilans hebdomadaires.</p><p>Réalisation de petits projets Spring pour expérimenter la génération de documentation par IA ; contribution à des travaux de documentation pour Blancheporte.</p><p class="career-tech">Python · PostgreSQL · Spring · Pytest · Docker · GitLab CI/CD</p></div></details>
+  <details class="career-entry"><summary><span class="career-date">Janv. — févr. 2023</span><span class="career-position">Développeur Angular <small>TCD Web · Villeneuve-d’Ascq · Stage</small></span></summary><div class="career-body"><p>Participation en équipe au développement et à la vérification de fonctionnalités de Formation TST, application de gestion des formations pour Engie ; environnement Angular, TypeScript et NestJS. Suivi quotidien de l’avancement.</p><div class="career-projects"><button type="button" data-career-project="formation-tst" aria-haspopup="dialog">Voir Formation TST ↗</button></div></details>
+  <details class="career-entry"><summary><span class="career-date">Mai — juin 2022</span><span class="career-position">Développeur PHP <small>Artanime · Leers · Stage</small></span></summary><div class="career-body"><p>Réalisation autonome du site associatif Artanime, de la maquette à la mise en ligne ; PHP, MariaDB, suivi Trello et présentations hebdomadaires.</p><div class="career-projects"><button type="button" data-career-project="SiteArtanime" aria-haspopup="dialog">Voir Artanime ↗</button></div></div></details>
+ </div>
+ <aside class="career-education" aria-labelledby="education-heading"><h3 id="education-heading">Formation</h3>
+  <div class="education-entry"><span class="career-date">2023 — 2024</span><h4>Bachelor Administrateur des systèmes d’information</h4><p>JUNIA XP · Université Catholique de Lille</p><small>Diplôme obtenu en 2024. Enseignements DevOps : déploiement, automatisation, maintenance et intégration continue.</small></div>
+  <div class="education-entry"><span class="career-date">2021 — 2023</span><h4>BTS SIO, option SLAM</h4><p>Saint-Rémi · Roubaix</p><small>Diplôme obtenu en 2023 · Services informatiques aux organisations, option solutions logicielles et applications métiers.</small></div>
+  <div class="career-languages"><h3>Langues</h3><p>Français <span>Langue maternelle</span></p><p>Anglais <span>B2</span></p></div>
+ </aside>
+</section>
+<section class="wrap capabilities" id="competences" aria-labelledby="skills-heading"><div class="section-heading"><div><p class="eyebrow">03 / COMPÉTENCES</p><h2 id="skills-heading">En pratique<span class="heading-dot">.</span></h2></div></div><div class="capability-grid">
+<article><span class="capability-number">01</span><h3>Développement</h3><p>Java · Spring (projets exploratoires)<br>Angular · TypeScript · React<br>Python · PHP · Symfony</p></article>
+<article><span class="capability-number">02</span><h3>Données et API</h3><p>PostgreSQL · SQL<br>Conception relationnelle · ORM · Migrations<br>API REST</p></article>
+<article><span class="capability-number">03</span><h3>Qualité et livraison</h3><p>GitLab · Merge requests · Pipelines CI/CD<br>Docker · Pytest<br>Nginx · Cloudflare</p></article>
+</div></section>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative bg-gradient-to-br from-indigo-900 to-indigo-600 text-white min-h-screen flex items-center justify-center text-center pt-16 md:pt-0 overflow-hidden">
-      <div
-        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xNSIgLz4KICAgIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMTUiIC8+CiAgICA8Y2lyY2xlIGN4PSI0OCIgY3k9IjQ4IiByPSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjE1IiAvPgogICAgPGNpcmNsZSBjeD0iMjQiIGN5PSI0MCIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xNSIgLz4KICAgIDxjaXJjbGUgY3g9IjQwIiBjeT0iMjQiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMTUiIC8+CiAgPC9nPgo8L3N2Zz4K')] bg-repeat opacity-20 animate-pulse-slow"
-      ></div>
-      <div class="container mx-auto px-4 relative z-10 pb-12 md:pb-0">
-        <img src="images/profil.jpg" alt="Photo de profil Armand Masse" class="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto mb-8 object-cover border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" />
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-3 tracking-tight">Armand Masse</h1>
-        <p class="text-lg md:text-2xl mb-3 font-medium">Alternant Data Analyst | Alternance 2025</p>
-        <p class="text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
-          <span class="font-bold">Jeune diplômé passionné par l'Analyse Data,</span>
-          avec un an d'expérience en IA et optimisation des processus internes, issu d'un cursus DevOps.
-          <br />
-          <br />
-          Je recherche une alternance pour 2025 en
-          <span class="font-bold">Management de la Transformation Digitale</span>
-          (ISCOD 2025–2027, rythme flexible 4j entreprise / 1j formation).
 
-        </p>
-        <div class="mt-6 flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-4 justify-center items-center">
-          <a href="#contact" class="bg-white text-indigo-900 px-6 py-2.5 rounded-full font-semibold shadow-md hover:bg-indigo-100 transition-colors duration-300 w-full md:w-auto text-center flex items-center justify-center">
-            <i class="fas fa-envelope mr-2"></i>
-            Me contacter
-          </a>
-          <a href="CV_ArmandMASSE_ISCOD.pdf" download class="bg-white text-indigo-900 px-6 py-2.5 rounded-full font-semibold shadow-md hover:bg-indigo-100 transition-colors duration-300 w-full md:w-auto text-center flex items-center justify-center">
-            <i class="fas fa-download mr-2"></i>
-            Télécharger mon CV
-          </a>
-          <a href="https://www.linkedin.com/in/armand-masse-90154a23b/" target="_blank" rel="noopener noreferrer" class="bg-white text-indigo-900 px-6 py-2.5 rounded-full font-semibold shadow-md hover:bg-indigo-100 transition-colors duration-300 flex items-center justify-center w-full md:w-auto">
-            <i class="fab fa-linkedin-in mr-2"></i>
-            Mon profil LinkedIn
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Pourquoi moi Section -->
-    <section id="atouts" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Pourquoi moi ?</h2>
-        <div class="atouts-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 opacity-0 translate-y-10 transition-all duration-500">
-          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Montré par des projets en Python et SQL qui résolvent des problèmes réels, comme l'analyse de grands volumes de données.">
-            <i class="fas fa-cogs text-indigo-900 text-4xl mb-4"></i>
-            <h3 class="text-xl font-semibold">Techniques & Logique</h3>
-          </div>
-          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Développé lors de stages indépendants et de projets personnels, comme des apps web et mobile réalisées seul.">
-            <i class="fas fa-user-check text-indigo-900 text-4xl mb-4"></i>
-            <h3 class="text-xl font-semibold">Autonomie & Pratique</h3>
-          </div>
-          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Affiné en équipe pendant des stages et des travaux scolaires, avec une communication claire et une bonne adaptabilité.">
-            <i class="fas fa-handshake text-indigo-900 text-4xl mb-4"></i>
-            <h3 class="text-xl font-semibold">Soft Skills</h3>
-          </div>
-          <div class="atout bg-indigo-100 p-6 rounded-lg shadow-md text-center" data-tooltip="Anglais maîtrisé (niveau C1) et ouverture culturelle acquise par des voyages et des contenus en plusieurs langues.">
-            <i class="fas fa-globe text-indigo-900 text-4xl mb-4"></i>
-            <h3 class="text-xl font-semibold">Langues & Ouverture</h3>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Compétences Section -->
-    <section id="competences" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Mes Compétences</h2>
-        <p class="text-center mb-8">Voici mes outils principaux ! (survolez les cartes pour plus d'infos) :</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Employé pour l'IA et l'analyse de données chez INETUM, avec des scripts qui automatisent des tâches.">
-            <i class="fab fa-python text-indigo-900 text-3xl mb-2"></i>
-            <p>Python</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Requêtes avancées pour bases de données lors de stages et projets personnels.">
-            <i class="fas fa-database text-indigo-900 text-3xl mb-2"></i>
-            <p>SQL</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Tableaux de bord interactifs pour visualiser des données en alternance.">
-            <i class="fas fa-chart-bar text-indigo-900 text-3xl mb-2"></i>
-            <p>Power BI</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Développement frontend pour apps web chez TCD WEB.">
-            <i class="fab fa-angular text-indigo-900 text-3xl mb-2"></i>
-            <p>Angular</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Sites vitrine dynamiques pendant le stage chez ARTANIME.">
-            <i class="fab fa-php text-indigo-900 text-3xl mb-2"></i>
-            <p>PHP</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Automatisation CI/CD dans mon cursus DevOps.">
-            <i class="fas fa-tools text-indigo-900 text-3xl mb-2"></i>
-            <p>DevOps</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Modèles de machine learning et analyse de données en formation IA.">
-            <i class="fas fa-robot text-indigo-900 text-3xl mb-2"></i>
-            <p>IA & Data</p>
-          </div>
-          <div class="skill-icon bg-white p-4 rounded-lg shadow-md text-center" data-tooltip="Macros et formules avancées pour des rapports.">
-            <i class="fas fa-file-excel text-indigo-900 text-3xl mb-2"></i>
-            <p>Excel</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-8 text-indigo-900 text-center">Mes Projets GitHub</h2>
-        <p class="text-center mb-12 text-gray-600 max-w-2xl mx-auto">Découvrez mes projets mis en production ou disponibles sur GitHub. Cliquez pour explorer le code source ou tester les démos live lorsque disponibles.</p>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Projet: Dark Dismal Charsheet (Juin 2025) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Dark Dismal Charsheet</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-html5 text-orange-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="HTML"></i>
-              <i class="fab fa-js-square text-yellow-500 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="JavaScript"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Projet de fiche personnage pour Roll20 avec gestion des stats et inventaire sur la fiche, et API de gestion des tours et du combat.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Juin 2025</span>
-              à
-              <span class="font-bold">Juin 2025</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Sunitro23/dark-dismal-charsheet" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Voir sur GitHub
-              </a>
-            </div>
-          </div>
 
-          <!-- Projet: Django Movie (Mai 2024) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Django Movie</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-python text-blue-500 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="Python"></i>
-              <i class="fas fa-server text-green-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="Django"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Application web Django utilisant l'API OMDB pour rechercher et afficher des informations détaillées sur les films, avec instructions d'installation.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Avril 2024</span>
-              à
-              <span class="font-bold">Mai 2024</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Sunitro23/django-movie" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Voir sur GitHub
-              </a>
-              <a href="http://movie.sunitro.de/movies/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fas fa-external-link-alt mr-2"></i>
-                Démo Live
-              </a>
-            </div>
-          </div>
 
-          <!-- Projet: Airneis (Mai 2024) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Airneis</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-angular text-red-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="Angular"></i>
-              <i class="fab fa-js-square text-yellow-500 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="TypeScript"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Projet frontend e-commerce développé avec Angular, incluant un serveur de développement.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Mai 2024</span>
-              à
-              <span class="font-bold">Mai 2024</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Sunitro23/angular-airneis" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Voir sur GitHub
-              </a>
-              <a href="http://airneis.sunitro.de/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fas fa-external-link-alt mr-2"></i>
-                Démo Live
-              </a>
-              <a href="http://api.airneis.sunitro.de/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fas fa-external-link-alt mr-2"></i>
-                Swagger API
-              </a>
-            </div>
-          </div>
-
-          <!-- Projet: Template E-Commerce (Décembre 2023) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Template E-Commerce</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-html5 text-orange-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="HTML"></i>
-              <i class="fab fa-css3-alt text-blue-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="CSS"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Template HTML pour un site e-commerce spécialisé dans la vente de vêtements.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Octobre 2023</span>
-              à
-              <span class="font-bold">Décembre 2023</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Sunitro23/template" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Voir sur GitHub
-              </a>
-              <a href="https://template.sunitro.de/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fas fa-external-link-alt mr-2"></i>
-                Démo Live
-              </a>
-            </div>
-          </div>
-
-          <!-- Projet: Pepepital (Octobre 2023) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Pepepital</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-java text-red-700 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="Java"></i>
-              <i class="fab fa-php text-purple-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="PHP"></i>
-              <i class="fas fa-mobile-alt text-blue-500 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="Flutter"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Projet de gestion hospitalière incluant : une application mobile pour les rendez-vous, un site web pour les rendez-vous et un pour les traitements, et une application Java pour la gestion des plats.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Décembre 2022</span>
-              à
-              <span class="font-bold">Octobre 2023</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Basile-Mercado/Pepeflutter" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Appli Mobile RDV
-              </a>
-              <a href="https://github.com/Sunitro23/slam2023_pepepital_consult/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Gestion Traitements
-              </a>
-              <a href="https://github.com/LaelV/Pepefinal" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Site Web RDV
-              </a>
-              <a href="https://github.com/Basile-Mercado/AP_Pepepital" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Appli Java Plats
-              </a>
-            </div>
-          </div>
-
-          <!-- Projet: Site Artanime (Juin 2022) -->
-          <div class="p-6 rounded-xl border border-gray-200 bg-white hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 relative">
-            <h3 class="text-2xl font-semibold mb-3 text-indigo-900">Site Artanime</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <i class="fab fa-php text-purple-600 text-2xl tech-icon cursor-pointer transition-transform duration-200 hover:scale-125" data-tooltip="PHP"></i>
-            </div>
-            <p class="mb-4 text-gray-700">Site vitrine en PHP pour l'association Artanime, promouvant des activités artistiques et culturelles comme la danse, la musique et les arts plastiques.</p>
-            <p class="text-sm text-gray-600 mb-4">
-              De
-              <span class="font-bold">Mai 2022</span>
-              à
-              <span class="font-bold">Juin 2022</span>
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="https://github.com/Sunitro23/SiteArtanime" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                Voir sur GitHub
-              </a>
-              <a href="https://artanime.sunitro.de/" target="_blank" rel="noopener noreferrer" class="text-indigo-900 hover:underline flex items-center">
-                <i class="fas fa-external-link-alt mr-2"></i>
-                Démo Live
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Expériences Section -->
-    <section id="experiences" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Mes Expériences</h2>
-        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-indigo-500">
-          <!-- Item 1 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
-            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Développement d'algorithmes IA pour optimiser des processus.">
-              <h3 class="text-xl font-semibold">Développeur IA chez INETUM</h3>
-              <p>09/2023 – 09/2024, Lille</p>
-            </div>
-          </div>
-          <!-- Item 2 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
-            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Création d'interfaces utilisateur réactives en Angular.">
-              <h3 class="text-xl font-semibold">Développeur Angular - Stage chez TCD WEB</h3>
-              <p>01/2023 – 02/2023, Villeneuve-d'Ascq</p>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
-            <div class="projet w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md" data-tooltip="Développement d'un site vitrine pour sites e-commerce.">
-              <h3 class="text-xl font-semibold">Développeur PHP - Stage chez ARTANIME</h3>
-              <p>05/2022 – 06/2022, Leers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Formations Section -->
-    <section id="formations" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Mes Formations</h2>
-        <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-indigo-500">
-          <!-- Item 1 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
-            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
-              <h3 class="text-xl font-semibold">Bachelor DEVOPS - JUNIA XP Université Catholique de Lille</h3>
-              <p>09/2023 – 09/2024, Lille</p>
-            </div>
-          </div>
-          <!-- Item 2 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
-            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
-              <h3 class="text-xl font-semibold">BTS Service Informatique aux Organisations - Lycée Saint Rémi</h3>
-              <p>09/2021 – 06/2023, Roubaix</p>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
-            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-900 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
-            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-indigo-100 p-4 rounded-lg shadow-md">
-              <h3 class="text-xl font-semibold">Baccalauréat Général - Lycée Collège Emile Zola</h3>
-              <p>09/2018 – 06/2021, Wattrelos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Intérêts Section -->
-    <section id="interets" class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 text-center">Centres d'Intérêt</h2>
-        <p class="text-center mb-8">Hors travail, je développe ma créativité pour maintenir mon inspiration :</p>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-pencil-alt text-indigo-900 text-3xl mb-2"></i>
-            <p>Dessin</p>
-          </div>
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-code text-indigo-900 text-3xl mb-2"></i>
-            <p>Développement</p>
-          </div>
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-video text-indigo-900 text-3xl mb-2"></i>
-            <p>Montage Vidéo</p>
-          </div>
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-pen text-indigo-900 text-3xl mb-2"></i>
-            <p>Ecriture</p>
-          </div>
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-hiking text-indigo-900 text-3xl mb-2"></i>
-            <p>Randonnée</p>
-          </div>
-          <div class="bg-indigo-100 p-4 rounded-lg shadow-md text-center">
-            <i class="fas fa-campground text-indigo-900 text-3xl mb-2"></i>
-            <p>Camping en forêt</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-100">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-8 text-indigo-900">Contactez-moi</h2>
-        <form action="https://formspree.io/f/xkgvzzoo" method="POST" class="max-w-xl mx-auto">
-          <input type="text" name="name" placeholder="Votre Nom" class="w-full p-3 mb-4 rounded border border-gray-300" required />
-          <input type="email" name="email" placeholder="Votre Email" class="w-full p-3 mb-4 rounded border border-gray-300" required />
-          <textarea name="message" placeholder="Votre Message" class="w-full p-3 mb-4 rounded border border-gray-300 h-32" required></textarea>
-          <button type="submit" class="bg-indigo-900 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-indigo-700 transition-colors duration-300">Envoyer</button>
-        </form>
-        <p class="mt-6 text-gray-600">Ou directement : +33 7 82 35 24 35 | armand.masse23@gmail.com | Leers (59115)</p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-indigo-900 text-white py-4 text-center">
-      <p>© 2025 Armand Masse. Tous droits réservés.</p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+<section class="wrap interests" id="hobbies"><p class="eyebrow">EN DEHORS DU CODE</p><div class="interest-strip"><h2>Jeux de rôle</h2><span aria-hidden="true">/</span><h2>Homelabbing</h2><span aria-hidden="true">/</span><h2>Dessin</h2></div><p>Imaginer des univers, expérimenter avec mes propres services et dessiner.</p></section>
+<section class="wrap contact" id="contact"><div><p class="eyebrow">04 / CONTACT</p><h2>Échangeons<span class="heading-dot">.</span></h2><p>Un projet à partager ou une question sur mon travail ? Contactez-moi par email, téléphone ou LinkedIn.</p><dl class="contact-facts"><div><dt>Secteur</dt><dd>Métropole lilloise · Valenciennois</dd></div><div><dt>Mobilité</dt><dd>Permis B · Véhicule personnel</dd></div><div><dt>Organisation</dt><dd>Présentiel / hybride</dd></div><div><dt>Disponibilité</dt><dd>Disponible immédiatement</dd></div></dl></div><div class="contact-details"><a class="button primary" href="mailto:armand.masse23@gmail.com">armand.masse23@gmail.com <span>↗</span></a><a class="contact-phone" href="tel:+33782352435">+33 7 82 35 24 35</a><a class="contact-social" href="https://www.linkedin.com/in/armand-masse-90154a23b/" target="_blank" rel="noopener noreferrer">Retrouvez-moi sur LinkedIn ↗</a></div></section>
+<section class="wrap site-stack" aria-label="Gestion du site"><p>Ce site est géré avec <strong>Nginx</strong>, <strong>Cloudflare</strong> et <strong>Docker</strong>.</p></section>
+</main><footer class="wrap"><a class="logo" href="#accueil"><span>&lt;/&gt;</span> Armand Massé.</a><span>Armand Massé · Développeur junior Java / Angular.</span><a href="#accueil">Retour en haut ↑</a></footer>
+<dialog id="project-preview" aria-labelledby="preview-title" aria-describedby="preview-description">
+ <div class="preview-content">
+  <div class="preview-heading"><div><p class="eyebrow">DÉTAILS DU PROJET</p><h2 id="preview-title"></h2></div><button id="preview-close" type="button" aria-label="Fermer l’aperçu" autofocus>×</button></div>
+  <p id="preview-description"></p>
+  <div id="preview-tags" class="tags"></div>
+  <div class="preview-layout">
+   <div id="preview-details"></div>
+   <div id="preview-capture">
+  <div class="preview-toolbar"><span id="preview-domain"></span><div class="preview-modes" role="group" aria-label="Format de la capture"><button type="button" data-preview-mode="desktop" aria-pressed="true">Ordinateur</button><button type="button" data-preview-mode="mobile" aria-pressed="false">Mobile</button></div></div>
+  <div id="preview-stage" data-mode="desktop"><img id="preview-image" alt="" width="1365" height="900"><p id="preview-error" hidden>Cette capture n’a pas pu être chargée. Vous pouvez toujours ouvrir l’application ci-dessous.</p></div>
+  <a id="preview-full-image" target="_blank" rel="noopener noreferrer">Voir la capture en grand ↗</a>
+   </div>
+  </div>
+  <div class="preview-footer"><p id="preview-caption">Captures des pages publiques · septembre 2026</p><div class="preview-links"><a class="button" id="preview-source" target="_blank" rel="noopener noreferrer">Voir le code ↗</a><a class="button primary" id="preview-visit" target="_blank" rel="noopener noreferrer">Ouvrir l’application ↗</a></div></div>
+ </div>
+</dialog>
+</body></html>

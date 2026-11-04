@@ -1,1 +1,21 @@
 /certs
+
+# Migration: local configuration and private data
+.env
+.env.*
+!.env.example
+!.env.*.example
+node_modules/
+dist/
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.bak
+*.backup
+backups/
+certs/

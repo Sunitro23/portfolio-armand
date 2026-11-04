@@ -1,0 +1,10 @@
+name: sunitro-portfolio
+services:
+  portfolio:
+    build: .
+    container_name: portfolio
+    restart: unless-stopped
+    networks: [proxy-network]
+networks:
+  proxy-network:
+    external: true
